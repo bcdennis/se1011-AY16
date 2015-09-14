@@ -76,7 +76,7 @@ public class Operators {
         // ++ --
         int n = 1;
         System.out.println(n);
-        n = n+1;
+        int o = n;
 
         System.out.println(n);
         int p = ++n;
