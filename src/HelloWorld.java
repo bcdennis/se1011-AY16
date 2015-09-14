@@ -5,14 +5,12 @@
  * to demonstrate some first Java programming concepts.
  *
  * @author Brad Dennis
- * Created on:  09/09/2015
- * Last updated: 09/09/2015
+ * Created:  09/09/2015
+ * Modified: 09/010/2015
  */
 public class HelloWorld {
 
     public static void main(String[] args) {
-
         System.out.println("Hello World!");
-
     }
 }
