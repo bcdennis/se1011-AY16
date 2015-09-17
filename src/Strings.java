@@ -2,7 +2,7 @@
  * Strings.java
  *
  * This is a simple program that will be used to demonstrate
- * data types, variables, constants, and assignments.
+ * Strings.
  *
  * @author Brad Dennis
  * Created:  09/13/2015

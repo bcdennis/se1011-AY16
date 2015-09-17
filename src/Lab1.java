@@ -28,6 +28,9 @@ public class Lab1 {
         Scanner in = new Scanner(System.in);
 
         // Request data from the user
+        System.out.println("Whats your name?");
+        String name = in.nextLine();
+
         System.out.print("Enter the number of hours worked per week: ");
         int hoursWorked = in.nextInt();
         System.out.print("Enter the number of weeks of vacation taken: ");
