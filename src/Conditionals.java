@@ -23,6 +23,8 @@ public class Conditionals {
         System.out.print("Enter the students final grade as a number: ");
         response = stdIn.nextLine();
 
+        // (!response.equals("q") && !response.equals("Q"))
+        // response.equalsIgnoreCase("q")
         while (!(response.equals("q") || (response.equals("Q")))) {
 
             String grade = "F";
