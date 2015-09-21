@@ -22,7 +22,7 @@ public class InputOutput {
         double doubleReal;
         String string1;
         String string2;
-
+/*
         // Prompts for user input
         System.out.println("Enter an integer, a long integer, "
                 + "a floating-point ");
@@ -43,6 +43,12 @@ public class InputOutput {
         System.out.println(integer + " " + longInteger + " " + realNumber +
                 " " + doubleReal + " " + string1 +
                 " and " + string2);
+*/
+
+        //String escapeChars = "\tHeading\tColumn\t\r\n\"Row\"";
+        //System.out.println(escapeChars);
+
+
 
         // We can also interact with the user via a GUI
         String input = JOptionPane.showInputDialog("Please enter a number");

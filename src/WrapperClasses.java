@@ -1,3 +1,5 @@
+import java.math.BigInteger;
+
 /**
  * WrapperClasses.java
  *
@@ -27,7 +29,7 @@ public class WrapperClasses {
         labAverage = 93;    // and this?
 
         // What's wrong with this?
-        //int finalGrade = (int) examWeight * examAverage + labWeight * labAverage;
+        int finalGrade = (int) (examWeight * examAverage + labWeight * labAverage);
 
         // declaration and initialization
         int exam1 = 90;
