@@ -22,10 +22,10 @@ public class Loops {
         // Write a program that accepts a string of characters and generates a sequence of moves.
 
         Scanner stdIn = new Scanner(System.in);
-        System.out.print("Enter in the moves ('w' 'a' 's' 'd'): ");
+        System.out.print("Enter in your moves ('w' 'a' 's' 'd'): ");
         String moves = stdIn.nextLine();
 
-        System.out.println("while loop");
+        System.out.println("\nwhile loop");
         System.out.println("--------------");
         int index = 0;
         while (index < moves.length()) {
@@ -48,9 +48,37 @@ public class Loops {
             index++;
         }
 
+        // while with a break
+        System.out.println("\nwhile with break");
+        System.out.println("--------------");
+        index = 0;
+        while (true) {
+            char move = moves.charAt(index);
+            switch(move) {
+                case 'w':
+                    System.out.println("up");
+                    break;
+                case 'a':
+                    System.out.println("left");
+                    break;
+                case 's':
+                    System.out.println("down");
+                    break;
+                case 'd':
+                    System.out.println("right");
+                    break;
+            }
+
+            index++;
+            if (index >= moves.length() ) {
+                break;
+            }
+
+        }
+
 
         //do while loop
-        System.out.println("do-while loop");
+        System.out.println("\ndo-while loop");
         System.out.println("--------------");
         index = 0;
         do {
@@ -74,7 +102,7 @@ public class Loops {
         } while (index < moves.length());
 
         //for loop
-        System.out.println("for loop");
+        System.out.println("\nfor loop");
         System.out.println("--------------");
         for (int i = 0; i < moves.length(); i++) {
             char move = moves.charAt(i);
