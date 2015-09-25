@@ -15,7 +15,7 @@ public class InputOutput {
 
     public static void main(String[] args) {
         // Variable declarations
-        Scanner in = new Scanner(System.in);
+        Scanner stdIn = new Scanner(System.in);
         int integer;
         long longInteger;
         float realNumber;

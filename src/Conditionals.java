@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /**
- * InputOutput.java
+ * Conditionals.java
  *
  * This is a simple program that will be used to demonstrate
  * conditionals.
@@ -82,3 +82,43 @@ public class Conditionals {
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
