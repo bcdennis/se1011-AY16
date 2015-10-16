@@ -84,10 +84,18 @@ public class Complex {
 
     public void setImaginary(double imaginary){
         this.imaginary = imaginary;
+
     }
 
     public double getImaginary() {
         return this.imaginary;
+    }
+
+    public Complex swapReal(Complex swapper) {
+        double temp = this.real;
+        this.real = swapper.getReal();
+        swapper.setReal(temp);
+        return swapper;
     }
 
     /**
@@ -111,7 +119,7 @@ public class Complex {
         return answer;
     }
 
-    /**
+     /**
      * Calculates the sum of the object and a real value
      * @param addend The value to be added to the real component of the complex number
      * @return A new complex number containing the sum of the object and the specified

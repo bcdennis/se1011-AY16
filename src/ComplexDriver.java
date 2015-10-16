@@ -45,8 +45,18 @@ public class ComplexDriver {
         System.out.print("c3 reference: ");
         System.out.println(thirdComplex);
 
+        //suppose we want to see if two objects are equal?
+        System.out.println(firstComplex.equals(secondComplex));
 
         // suppose we wanted to swap the imaginary components of c1 & c2?
+        firstComplex.swapReal(secondComplex);
+
+        System.out.print("c1 reference: ");
+        System.out.println(firstComplex);
+
+        System.out.print("c2 reference: ");
+        System.out.println(secondComplex);
+
 
     }
 }
