@@ -67,10 +67,23 @@ public class Car {
     /**
      * Crashes into another car by combining paint colors.
      *
-     * @param otherCar  The other car that got crashed into.
+     * @param secondCar  The other car that got crashed into.
      */
-    public void crash(Car otherCar) {
-        otherCar.setColor(getColor()+ otherCar.getColor());
+    public void crash(Car secondCar) {
+        String temp = secondCar.getColor();
+        secondCar.setColor(getColor()+ temp);
+        setColor(getColor() + temp);
+    }
+
+    /**
+     * Three car pile-up.
+     *
+     * @param secondCar The second car in the crash.
+     * @param thirdCar  The third car in the crash.
+     */
+    public void crash(Car secondCar, Car thirdCar) {
+        crash(secondCar);
+        crash(thirdCar);
     }
 
 
