@@ -25,13 +25,13 @@ public class Arrays {
         String[] references;
         references = new String[20];
 
-/*
+
         for (int i =0; i < integers.length; i++) {
-            System.out.println(integers[i]);
+            //System.out.println(integers[i]);
         }
 
         for (int i = 0; i < references.length; i++){
-            System.out.println(references[i]);
+            //System.out.println(references[i]);
         }
 
         initializePrimitives(integers);
@@ -39,7 +39,7 @@ public class Arrays {
         for (int i =0; i < integers.length; i++) {
             System.out.println(integers[i]);
         }
-*/
+
         String[] strings = {"Dennis"
                 , "Hasker"
                 , "Taylor"
@@ -53,20 +53,20 @@ public class Arrays {
 
         String[] copyOfStrings = new String[strings.length];
         copyStrings(strings, copyOfStrings);
-//        printStrings(copyOfStrings, System.out);
+        printStrings(copyOfStrings, System.out);
 
 //        strings[strings.length] = "NewProf";
 
-//        strings = resizeStrings(strings, 10);
-//        printStrings(strings, System.out);
-/*
+        strings = resizeStrings(strings, 10);
+        printStrings(strings, System.out);
+
         if (searchStrings(strings, "Hornick")) {
             System.out.println("Hornick appears in the array.");
         } else {
             System.out.println("Hornick does not appear in the array.");
         }
 
-        //unsetString(strings, "Hornick");
+        unsetString(strings, "Hornick");
 
         if (searchStrings(strings, "Hornick")) {
             System.out.println("Hornick appears in the array.");
@@ -75,9 +75,11 @@ public class Arrays {
         }
 
         //printStrings(strings, System.out);
-        */
+
+
         swap(strings, 1, 2);
         printStrings(strings, System.out);
+          
     }
 
     private static void initializePrimitives(int[] array) {
@@ -123,7 +125,7 @@ public class Arrays {
 
     private static void unsetString(String[] haystack, String needle) {
         for (int i = 0; i < haystack.length; i++ ) {
-            if (haystack[i].equals(needle)) {
+            if (haystack[i] != null && haystack[i].equals(needle)) {
                 haystack[i] = null;
             }
         }
