@@ -9,7 +9,7 @@ public class Chap8 {
     public static void main(String[] args) {
 
         Scanner si = new Scanner(System.in);
-        System.out.println("This program draws a square.");
+        System.out.println("This program draws a pyramid.");
         System.out.print("Enter the size of the square to draw: ");
         int sz = si.nextInt();
         si.nextLine();
