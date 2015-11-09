@@ -3,42 +3,40 @@
  * Fall 2015
  * Arrays Lecture
  * Name: Brad Dennis
- * Created:  10/12/2015
+ * Created:  11/09/2015
  */
 
 import java.io.PrintStream;
+import java.util.ArrayList;
 import java.util.Random;
+import java.util.Arrays;
 
 /**
- * A simple class used to demo Arrays.
+ * A simple class used to demo ArrayLists.
+ * See http://msoe.us/taylor/tutorial/se1011/arrayList
  *
  */
-public class Arrays {
+public class ArrayLists {
 
     public static void main(String[] args) {
 
-        // An array is a collection of primitives
+        // An ArrayList is a collection like arrays, but can only store references.
         int[] integers;
-        integers = new int[20];
+        integers = new int[5];
 
         // or a collection of references
-        String[] references;
-        references = new String[20];
+        ArrayList<String> references;
+        references = new ArrayList<>();
 
+        //recall how we initialized an array of ints?
+        Random rand = new Random();
 
-        for (int i =0; i < integers.length; i++) {
-            //System.out.println(integers[i]);
+        for (int i = 0; i < integers.length; i++) {
+            integers[i] = rand.nextInt(integers.length);
         }
 
-        for (int i = 0; i < references.length; i++){
-            //System.out.println(references[i]);
-        }
 
-        initializePrimitives(integers);
-
-        for (int i =0; i < integers.length; i++) {
-            System.out.println(integers[i]);
-        }
+        /*
 
         String[] strings = {"Dennis"
                 , "Hasker"
@@ -47,48 +45,84 @@ public class Arrays {
                 , "Urbain"
                 , "Rebenistch"
                 , "Hornick"};
+        */
+        // for an ArrayList
+        references.add("Dennis");
+        references.add("Hasker");
+        references.add("Schilling");
+        references.add("Urbain");
+        references.add("Rebenistch");
+        references.add("Hornick");
 
-        printStrings(strings, System.out);
+
+        for (int i =0; i < integers.length; i++) {
+            System.out.println(integers[i]);
+        }
+
+        for (int i = 0; i < references.size(); i++){
+            System.out.println(references.get(i));
+        }
+
+
+
+
+
+        //printStrings(strings, System.out);
+        System.out.println(references);
+
         System.out.println();
 
-        String[] copyOfStrings = new String[strings.length];
-        copyStrings(strings, copyOfStrings);
-        printStrings(copyOfStrings, System.out);
+        ArrayList<String> copyOfStrings = new ArrayList<String>();
+        //copyStrings(strings, copyOfStrings);
+        copyOfStrings = (ArrayList<String>)references.clone();
+
+        System.out.println(copyOfStrings);
 
 //        strings[strings.length] = "NewProf";
 
-        strings = resizeStrings(strings, 10);
-        printStrings(strings, System.out);
+//        strings = resizeStrings(strings, 10);
+//        printStrings(strings, System.out);
 
+        references.add("New Prof");
+        copyOfStrings.remove(1);
+
+        System.out.println(references);
+        System.out.println();
+
+        System.out.println(copyOfStrings);
+
+        /*
         if (searchStrings(strings, "Hornick")) {
             System.out.println("Hornick appears in the array.");
         } else {
             System.out.println("Hornick does not appear in the array.");
         }
+        */
 
-        unsetString(strings, "Hornick");
-
-        if (searchStrings(strings, "Hornick")) {
+        if (references.contains("Hornick")) {
             System.out.println("Hornick appears in the array.");
         } else {
             System.out.println("Hornick does not appear in the array.");
         }
 
-        //printStrings(strings, System.out);
+
+        //unsetString(strings, "Hornick");
+
+        references.remove("Hornick");
+
+        if (references.contains("Hornick")) {
+            System.out.println("Hornick appears in the array.");
+        } else {
+            System.out.println("Hornick does not appear in the array.");
+        }
 
 
-        swap(strings, 1, 2);
-        printStrings(strings, System.out);
 
     }
 
     private static void initializePrimitives(int[] array) {
 
-        Random rand = new Random();
 
-        for (int i = 0; i < array.length; i++) {
-            array[i] = rand.nextInt(array.length);
-        }
     }
 
     private static void printStrings(String[] strings, PrintStream out) {
