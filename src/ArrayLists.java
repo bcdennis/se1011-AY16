@@ -85,6 +85,12 @@ public class ArrayLists {
 
         System.out.println(references);
 
+        references.add("Dennis");
+        references.add("Hasker");
+        references.add("Schilling");
+        references.add("Urbain");
+        references.add("Rebenistch");
+        references.add("Hornick");
 
 
         //printStrings(strings, System.out);
