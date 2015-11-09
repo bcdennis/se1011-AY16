@@ -64,6 +64,26 @@ public class ArrayLists {
         }
 
 
+        for(String s: references) {
+            System.out.println(s);
+        }
+
+        while (!references.isEmpty()) {
+            references.remove(0);
+        }
+
+        System.out.println(references);
+
+        references.add("Dennis");
+        references.add("Hasker");
+        references.add("Schilling");
+        references.add("Urbain");
+        references.add("Rebenistch");
+        references.add("Hornick");
+
+        references.clear();
+
+        System.out.println(references);
 
 
 
@@ -105,10 +125,15 @@ public class ArrayLists {
             System.out.println("Hornick does not appear in the array.");
         }
 
+        // where is Hornick?  (lastIndexOf)
+        int hornickIndex = references.indexOf("Hornick");
 
         //unsetString(strings, "Hornick");
-
+        references.remove(hornickIndex);
+        // alternatively
+        references.add("Hornick");
         references.remove("Hornick");
+
 
         if (references.contains("Hornick")) {
             System.out.println("Hornick appears in the array.");
